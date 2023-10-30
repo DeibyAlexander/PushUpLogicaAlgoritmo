@@ -1,36 +1,3 @@
-/*   function ingresar(){
-      const valor = document.querySelector('.input').value
-      console.log(valor);
-      const pantalla = document.querySelector('.pantalla')
-      pantalla.innerHTML += `<h3>${valor}</h3>`
-      
-  }
- */
-
-/*const select = document.querySelector('.button1')
-select.addEventListener('click', ingresar)
-
-const lista = []
-
-
-
-function ingresar(){
-    const valor = document.querySelector('.input1').value
-    lista.push(Number(valor))
-    const valor2 = document.querySelector('.input2').value
-    lista.push(Number(valor2))
-
-    const suma = lista[0] + lista[1]
-    lista.push(Number(suma))
-
-    const pantalla = document.querySelector('.pantalla')
-    pantalla.innerHTML += `<h3>${lista[lista.length - 1]}</h3>`;
-
-    console.log(lista);
-   
-
-
-} */
 
 const calcular = document.querySelector('.Calcular')
 calcular.addEventListener('click', calcularFibonacci)
