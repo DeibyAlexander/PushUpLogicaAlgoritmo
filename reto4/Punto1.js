@@ -6,7 +6,7 @@ function registroVotacion(){
     const numeroUniversidades = parseInt(prompt('Ingrese el Numero de univeridades participantes'))
 
     for (let i = 1; i <= numeroUniversidades; i++) {
-        const nombreUniversidad = prompt(`Ingrese el nombre de su universidad ${i}`)
+        let nombreUniversidad = prompt(`Ingrese el nombre de su universidad ${i}`)
         let VotoA = 0
         let VotoR = 0
         let VotoN = 0
@@ -46,6 +46,7 @@ function registroVotacion(){
             VotoB: VotoB,
             totalVotos: totalVotos
         })
+        console.log(universidades);
 
     }
 
@@ -71,8 +72,21 @@ function registroVotacion(){
         
     }
 
-    alert('Resultados: \n' +
-    `Aceptan : ${aceptan}\n`+
-    `Rechazan : ${rechazan}\n`+
-    `Empatan : ${empate}\n`)
+    universidades.forEach((univers)=>{
+        const {nombre, VotoA, VotoR, VotoN, VotoB} = univers;
+            alert(`Numero de universidades: ${numeroUniversidades} \n`+
+            `Universidad: ${nombre} \n`+
+            `Voto: ${VotoA} \n`+
+            `Voto: ${VotoR} \n`+
+            `Voto: ${VotoN} \n`+
+            `Voto: ${VotoB} \n`+
+            `${nombre}: ${VotoA} Aceptan, ${VotoR} Rechazan, ${VotoB} Blancos, ${VotoN} Nulos \n`)
+    })
+
+/*  `Universidades que Aceptan : ${aceptan}\n`+
+    `Universidades que Rechazan : ${rechazan}\n`+
+    `Universidades con Empate : ${empate}\n` */
+
+
+    
 }
